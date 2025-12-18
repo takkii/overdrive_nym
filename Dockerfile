@@ -36,4 +36,4 @@ WORKDIR /overdrive_nym
 COPY . /overdrive_nym
 RUN gem update --system ${RUBYGEMS_VERSION} && BUNDLER_VERSION=${BUNDLER_VERSION} bundle install
 
-EXPOSE 80
+EXPOSE 9292
