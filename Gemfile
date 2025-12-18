@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+
+ruby '>= 3.3.6'
+
+gem 'bundler'
+gem 'nokogiri'
+gem 'observer'
+gem 'puma'
+gem 'rack'
+gem 'rack-protection'
+gem 'rack-test'
+gem 'rackup'
+gem 'rake'
+gem 'rubocop'
+gem 'rspec'
+gem 'sinatra'
+gem 'sinatra-contrib'
