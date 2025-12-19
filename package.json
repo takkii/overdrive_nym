@@ -1,0 +1,14 @@
+{
+  "name": "overdrive_ny,",
+  "version": "1.0.0",
+  "description": "Use, typeserver.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Takayuki Kamiyama",
+  "license": "MIT",
+  "dependencies": {
+    "npm-check-updates": "^19.2.0",
+    "types-server": "^1.0.5"
+  }
+}
