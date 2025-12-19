@@ -15,3 +15,5 @@ kill PID番号 or kill -9 PID番号
 ※ puma永続化、Dockerだとローカル環境との相違でJSONが拾えないため。
 
 _VPS稼働を1日してみてレスポンスが悪いため、稼働先をoverdriveプロジェクトに戻しました。_
+
+[にゃそこん龍](https://github.com/takkii/nyasocom_yon)をバックエンドして使います。
