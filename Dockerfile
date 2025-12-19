@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install nodejs -y && apt-get clean
 
 # npm install --global [npm|yarn]
 RUN npm install -g npm@latest
+RUN npm install -g yarn
 
 # locale
 RUN apt install -y language-pack-ja
