@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '>= 3.3.6'
 
 gem 'bundler'
-gem 'nokogiri'
 gem 'observer'
-gem 'puma'
+gem 'puma',  '~> 6'
+gem 'puma-daemon', require: false
 gem 'rack'
 gem 'rack-protection'
 gem 'rack-test'
