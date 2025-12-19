@@ -23,7 +23,6 @@ class Katana
   end
 end
 
-
 get '/' do
   @ruby = ('Ruby_VERSION : ' + RUBY_VERSION + ' ' + 'Sinatra_VERSION : ' + Sinatra::VERSION)
   @himekuri = HimekuriClass.new.himekuri
@@ -33,10 +32,12 @@ get '/' do
   @takkii = ' Takayuki Kamiyama All Rights Reserved. '
   @saya = Katana.new('Designed by NyaSoCom', 'Not Yet Another Software design of Computer')
   @nyasocom_version = NYASOCOM::VERSION
-  url = 'http://localhost:1337/datas'
+  url = 'http://localhost:3000/groups.json'
   uri = URI.parse(url)
   json = Net::HTTP.get(uri)
-  result = JSON.parse!(json)
+  remove_frame_k = json.delete!("[")
+  remove_frame = remove_frame_k.delete!("]")
+  result = JSON.parse!(remove_frame)
   @names = result['name']
   @titles = result['title']
   @dtcls = result['dtcl']
