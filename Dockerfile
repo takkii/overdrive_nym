@@ -38,6 +38,10 @@ ADD ./Gemfile $APP_ROOT/Gemfile
 ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 COPY . /overdrive_nym
 RUN gem update --system ${RUBYGEMS_VERSION} && BUNDLER_VERSION=${BUNDLER_VERSION} bundle install
+COPY ["package.json", "yarn.lock", "./"]
+RUN yarn install
+COPY . .
+RUN rm /bin/sh && mv /bin/sh_tmp /bin/sh
 ADD . $APP_ROOT
 
 EXPOSE 9292
