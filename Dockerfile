@@ -31,9 +31,13 @@ ENV RUBYOPT -EUTF-8
 FROM ruby:3.4.7
 
 # install
-RUN git clone -b main https://github.com/takkii/overdrive_nym.git
-WORKDIR /overdrive_nym
+RUN mkdir /overdrive_nym
+ENV APP_ROOT /overdrive_nym
+WORKDIR $APP_ROOT
+ADD ./Gemfile $APP_ROOT/Gemfile
+ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 COPY . /overdrive_nym
 RUN gem update --system ${RUBYGEMS_VERSION} && BUNDLER_VERSION=${BUNDLER_VERSION} bundle install
+ADD . $APP_ROOT
 
 EXPOSE 9292
