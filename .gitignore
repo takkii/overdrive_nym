@@ -1,5 +1,4 @@
+.idea/*
+public/.DS_Store
 .DS_Store
 Gemfile.lock
-public/.DS_Store
-.idea/*
-node_modules/*
