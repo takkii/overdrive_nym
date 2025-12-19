@@ -9,7 +9,9 @@ bundle exec puma -C config/puma.rb
 
 ps aux | grep puma
 
-kill PID番号
+kill PID番号 or kill -9 PID番号
 ```
 
 ※ puma永続化、Dockerだとローカル環境との相違でJSONが拾えないため。
+
+_VPS稼働を1日してみてレスポンスが悪いため、稼働先をoverdriveプロジェクトに戻しました。_
