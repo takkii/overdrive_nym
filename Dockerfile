@@ -37,6 +37,7 @@ ENV APP_ROOT /overdrive_nym
 WORKDIR $APP_ROOT
 ADD ./Gemfile $APP_ROOT/Gemfile
 ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
+RUN mv /bin/sh /bin/sh_tmp && ln -s /bin/bash /bin/sh
 COPY . /overdrive_nym
 RUN gem update --system ${RUBYGEMS_VERSION} && BUNDLER_VERSION=${BUNDLER_VERSION} bundle install
 COPY ["package.json", "yarn.lock", "./"]
